@@ -2,8 +2,12 @@
 lock "~> 3.19.2"
 
 set :application, "cdp_web_web_aws_deploy_task"
-set :repo_url, "git@github.com:uw819kt/aws_deploy_task.git"
+set :repo_url, "https://github.com/uw819kt/aws_deploy_task.git"
 set :bundle_without, %w{test}.join(':')
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
+set :keep_releases, 5
+set :rbenv_version, '3.3.0'
+set :log_level, :info
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

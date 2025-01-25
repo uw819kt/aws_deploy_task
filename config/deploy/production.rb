@@ -51,7 +51,7 @@
 # ------------------------------------
 server "13.208.251.71",
   user: "ec2-user",
-  roles: %w{cdp_web_web_aws_deploy_task},
+  roles: %w{web db app},
   ssh_options: {
     user: "ec2-user", # overrides user setting above
     keys: %w(~/.ssh/deploy.pem),
