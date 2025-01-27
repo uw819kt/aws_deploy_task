@@ -29,9 +29,9 @@ install_plugin Capistrano::SCM::Git
 # require "capistrano/rvm"
 require "capistrano/rbenv"
 # require "capistrano/chruby"
-require "capistrano/bundler"
-require "capistrano/rails/assets"
-require "capistrano/rails/migrations"
+require "capistrano/bundler" #デプロイ時bundle installを自動実行
+require "capistrano/rails/assets" #デプロイ時にアセットプリコンパイルを自動実行
+require "capistrano/rails/migrations" #デプロイ時にマイグレーションを自動実行
 require "capistrano/safe_deploy_to"
 require 'capistrano3/unicorn'
 # require "capistrano/passenger"

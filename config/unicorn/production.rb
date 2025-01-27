@@ -7,6 +7,10 @@
  pid '/var/www/cdp_web_web_aws_deploy_task/current/tmp/pids/unicorn.pid'   # 7.Unicornのプロセス（PID）の出力先を定義
  preload_app true    # 8.ワーカープロセス分岐前にアプリケーションをプリロード→trueでダウンタイムなくUnicornの再起動
 
+ before_exec do |server|
+   ENV["BUNDLE_GEMFILE"] = File.join(File.expand_path("../../../../", __FILE__), "current", "Gemfile")
+ end
+
  before_fork do |server, worker|   # 9.preload_appをtrueに設定する際に、公式で推奨されている設定
    defined?(ActiveRecord::Base) and ActiveRecord::Base.connection.disconnect!
    old_pid = "#{server.config[:pid]}.oldbin"
