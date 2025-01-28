@@ -1,7 +1,7 @@
  worker_processes  2   # 1.起動するワーカー数を定義
  working_directory "/var/www/cdp_web_web_aws_deploy_task/current"    # 2.Unicornを稼働させるディレクトリを指定
- stderr_path "log/unicorn.stderr.log"    # 3.エラーログの出力先を定義
- stdout_path "log/unicorn.stdout.log"    # 4.標準出力の出力先を定義
+ stderr_path "/var/www/cdp_web_web_aws_deploy_task/current/log/unicorn.stderr.log"    # 3.エラーログの出力先を定義
+ stdout_path "/var/www/cdp_web_web_aws_deploy_task/current/log/unicorn.stdout.log"    # 4.標準出力の出力先を定義
  timeout 300    # 5.ワーカープロセスのタイムアウトを秒単位で設定=>長めに…
  listen "/var/www/cdp_web_web_aws_deploy_task/current/tmp/sockets/unicorn.sock"    # 6.UNIXドメインソケットを使ってNginxと連携を想定した設定
  pid '/var/www/cdp_web_web_aws_deploy_task/current/tmp/pids/unicorn.pid'   # 7.Unicornのプロセス（PID）の出力先を定義
