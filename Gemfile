@@ -42,6 +42,7 @@ group :development do
   gem 'capistrano-safe-deploy-to'
   gem 'capistrano-rbenv', '~> 2.2'
   gem 'capistrano3-unicorn'
+  gem 'capistrano-bundler' # add
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
