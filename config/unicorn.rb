@@ -17,7 +17,7 @@ stderr_path "#{root_path}/log/unicorn.stderr.log"
 stdout_path "#{root_path}/log/unicorn.stdout.log"
 
 #応答時間を待つ上限時間を設定
-timeout 30
+timeout 300
 
 # ダウンタイムなしでUnicornを再起動時する
 preload_app true
